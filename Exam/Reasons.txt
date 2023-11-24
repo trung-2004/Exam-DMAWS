@@ -1,0 +1,28 @@
+﻿I. Lựa Chọn Công Nghệ:
+
+1. Kiến Trúc Không Máy Chủ (Serverless - AWS Lambda hoặc Azure Functions):
+Khả Năng Mở Rộng: Kiến trúc không máy chủ tự động mở rộng dựa trên nhu cầu. Điều này quan trọng cho hệ thống bán lẻ trực tuyến nơi nhu cầu người dùng có thể tăng đáng kể vào các thời điểm cao điểm, như Black Friday. Hệ thống có thể xử lý tải biến động mà không cần can thiệp thủ công.
+Hiệu Suất Chi Phí: Với tính toán không máy chủ, bạn chỉ trả tiền cho các tài nguyên tính toán thực sự được sử dụng trong quá trình thực thi các chức năng. Trong các giai đoạn nhu cầu thấp, chi phí giảm đi vì có ít chức năng chạy. Điều này có thể dẫn đến tiết kiệm chi phí đáng kể so với các kiến trúc truyền thống dựa trên máy chủ.
+Sự Đơn Giản Trong Việc Bảo Trì: Các nền tảng không máy chủ xử lý quản lý máy chủ, cập nhật hệ điều hành và các nhiệm vụ bảo trì khác. Điều này giảm bớt gánh nặng vận hành cho nhóm phát triển, giúp họ tập trung hơn vào việc xây dựng tính năng và cải thiện trải nghiệm người dùng.
+
+2. Containerization (Docker) và Orchestration (Kubernetes):
+Đồng Nhất Qua Các Môi Trường: Containers bao gồm ứng dụng và các phụ thuộc của chúng, đảm bảo tính đồng nhất qua các môi trường khác nhau. Tính đồng nhất này quan trọng khi triển khai và mở rộng ứng dụng qua các giai đoạn khác nhau, từ phát triển đến sản xuất.
+Khả Năng Mở Rộng và Hiệu Suất Tài Nguyên: Kubernetes, như một công cụ quản lý container, cho phép mở rộng tự động dựa trên nhu cầu. Nó quản lý hiệu quả các container, đảm bảo sử dụng tài nguyên tối ưu. Sự linh hoạt này quan trọng để xử lý nhu cầu người dùng biến động trong khi giảm thiểu chi phí hạ tầng.
+Cô Lập và Bảo Mật: Containers cung cấp tính cô lập giữa các ứng dụng, nâng cao tính bảo mật. Điều này đặc biệt quan trọng đối với hệ thống bán lẻ trực tuyến xử lý dữ liệu người dùng nhạy cảm. Kubernetes cung cấp các tính năng để quản lý chính sách bảo mật và kiểm soát truy cập.
+
+3. Kiến Trúc Microservices:
+Tính Mô-đun và Linh Hoạt: Kiến trúc microservices phân rã ứng dụng thành các dịch vụ nhỏ, độc lập. Tính mô-đun này cho phép cập nhật và sửa đổi dễ dàng cho các tính năng cụ thể mà không ảnh hưởng đến toàn bộ hệ thống. Nó phù hợp với tính động của hệ thống bán lẻ trực tuyến nơi yêu cầu có thể thay đổi theo thời gian.
+Tính Năng Cách Ly Lỗi Tốt Hơn: Trong kiến trúc microservices, nếu một dịch vụ gặp sự cố, điều này không nhất thiết làm ảnh hưởng đến toàn bộ hệ thống. Điều này tăng cường tính cách ly lỗi và đảm bảo rằng hệ thống vẫn hoạt động ngay cả khi một số thành phần gặp vấn đề.
+Đa Dạng Công Nghệ: Các microservices khác nhau có thể được phát triển bằng các công nghệ khác nhau, cho phép sử dụng các công cụ phù hợp nhất với từng nhiệm vụ cụ thể. Tính linh hoạt này là quan trọng khi thích ứng với nhu cầu người dùng biến động và tích hợp với các dịch vụ bên ngoài khác nhau.
+
+
+II. Lý Do Cho Sự Lựa Chọn:
+
+1. Tiết Kiệm Chi Phí:
+Tính toán không máy chủ và quản lý container giúp tận dụng tài nguyên một cách hiệu quả, dẫn đến việc tiết kiệm chi phí. Mô hình trả tiền dựa trên việc sử dụng của tính toán không máy chủ đảm bảo bạn chỉ trả tiền cho tài nguyên thực sự sử dụng, trong khi quản lý container tối ưu hóa việc phân bổ tài nguyên.
+
+2. Khả Năng Mở Rộng:
+Cả không máy chủ và quản lý container cung cấp khả năng mở rộng một cách tự động. Chúng tự động điều chỉnh tài nguyên dựa trên nhu cầu, đảm bảo hệ thống có thể xử lý cả sự gia tăng và giảm giảm nhu cầu của người dùng mà không cần can thiệp thủ công.
+
+3. Sự Thích Ứng với Sự Thay Đổi:
+Kiến trúc microservices cung cấp tính linh hoạt và thích ứng với sự thay đổi trong yêu cầu người dùng. Khi hệ thống phát triển, từng microservice có thể được cập nhật hoặc thay thế mà không ảnh hưởng đến toàn bộ ứng dụng. Tính mô-đun này hỗ trợ việc bảo trì và cải tiến hệ thống theo thời gian.
